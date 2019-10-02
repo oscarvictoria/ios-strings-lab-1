@@ -14,20 +14,46 @@
 Write code that prints out all the numbers from 1 to 10 as a single string.
 (Hint: the `String()` function can convert an Int to a String)
 
+var numString = ""
+for num in 1...10 {
+    numString += String(num)
+}
+print(numString)
+
 ***
 ## Question 2
 
 Write code that prints out all the even numbers from 5 to 51 as a single string.
+
+var numString = ""
+for num in 5...51 where num % 2 == 0 {
+    numString += String(num)
+}
+print(numString)
 
 ***
 ## Question 3
 
 Write code that prints out every number ending in 4 between 1 and 60 as a single string.
 
+var numString = ""
+for num in 1...60 where num % 10 == 4 {
+    numString += String(num)
+}
+print(numString)
+
 ***
 ## Question 4
 
 Print each character in the string `"Hello world!"`
+
+let message = "Hello world"
+var counter = 0
+
+for char in message {
+        print(char)
+        counter += 1
+}
 
 ***
 ## Question 5
@@ -35,6 +61,13 @@ Print each character in the string `"Hello world!"`
 Print out the last character in the string below.  You cannot use the Character literal "!" (i.e you must access `myStringSeven`'s characters).
 
 `let myStringSeven = "Hello world!"`
+
+let myStringSeven = "Hello world!"
+
+let endIndex = myStringSeven.endIndex
+let lastCharacterIndex = myStringSeven.index(before: endIndex)
+let lastCharacter = myStringSeven [lastCharacterIndex]
+print(lastCharacter)
 
 ***
 ## Question 6
@@ -48,6 +81,8 @@ Write code that switches on a string, given the following conditions:
 
 Initialize a String with a character. Show that it is a Character, and not another String, that you're using to initialize it.
 
+let String: Character = "a"
+
 ***
 ## Question 8
 
@@ -57,6 +92,8 @@ Build five pairs of **canonically equivalent** strings, the first of each being 
 ## Question 9
 
 **Using only Unicode**, print out `"HELLO WORLD!"`
+
+let helloWorld = "\u{0048}\u{0065}\u{006C}\u{006C}\u{006F}\u{0020}\u{0057}\u{006F}\u{0072}\u{006C}\u{0064}
 
 ***
 ## Question 10
@@ -90,6 +127,22 @@ Flower Box:
 | ⚘ | ⚘ | ⚘ | ⚘ | ⚘ |
 - - - - - - - - - - -
 ```
+let border = "- - - - - - - - - - - "
+//let symbol = "| \u{2698} |" + " \u{2698} |" + " \u{2698} |" + " \u{2698} |" + " \u{2698} |"
+let flowerBox = """
+| \u{2698} | \u{2698} | \u{2698} | \u{2698} | \u{2698} |
+"""
+let border2 = "- - - - - - - - - - - "
+print(border)
+//print(symbol)
+print(flowerBox)
+print(flowerBox)
+print(flowerBox)
+print(flowerBox)
+print(flowerBox)
+print(flowerBox)
+print(flowerBox)
+print(border2)
 
 ***
 ## Question 13
